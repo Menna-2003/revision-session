@@ -1,0 +1,88 @@
+:root {
+    --pink-color: #ffafcc;
+    --blue-color: #3a86ff;
+    --green-color: #57cc99;
+}
+
+.togglingButtons {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.togglingButtons .active {
+    transform: scale(1.3);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.togglingButtons div:first-child,
+.togglingButtons div:nth-child(2),
+.togglingButtons div:nth-child(3){
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.togglingButtons div:first-child {
+    background-color: var(--pink-color);
+}
+.togglingButtons div:nth-child(2) {
+    background-color: var(--blue-color);
+}
+.togglingButtons div:last-child{
+    background-color: var(--green-color);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vb;
+}
+.card {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    border: 5px solid var(--blue-color);
+    border-radius: 30px;
+    overflow: hidden;
+}
+.left {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.left form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.left .icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: var(--blue-color);
+    font-size: 30px;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    background-color: var(--blue-color);
+    color: #fff;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.right button {
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
